@@ -1,0 +1,414 @@
+/* Variable Start */
+:root {
+  --pertama: #2c3639;
+  --kedua: #3f4e4f;
+  --ketiga: #a27b5c;
+  --keempat: #dcd7c9;
+  --putih: #f5f5f5;
+  --hitam: #111111;
+}
+/* Variable End */
+
+/* General Start */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+}
+
+p {
+  line-height: 1.8rem;
+}
+
+section {
+  padding: 5rem 0 3rem;
+  max-width: 100vw;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--keempat);
+}
+
+h1 {
+  text-align: center;
+  font-size: 3.5rem;
+}
+
+footer {
+  background-color: var(--ketiga);
+  color: var(--putih);
+  padding-top: 1rem;
+}
+/* General End */
+
+/* Nav Start */
+nav {
+  width: 100%;
+  height: 5rem;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  z-index: 999999;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--hitam);
+  background-color: var(--ketiga);
+}
+
+nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  position: absolute;
+  right: 0;
+}
+
+.nav-item li a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  color: var(--putih);
+}
+
+.nav-item li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: var(--putih);
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.nav-item li:hover::after {
+  width: 100%;
+}
+
+.nav-button a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--putih);
+}
+
+nav img {
+  width: 2.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.burger-menu {
+  display: none;
+}
+/* Nav End */
+
+/* Footer Start */
+footer .container {
+  border-bottom: 1px solid var(--putih);
+}
+
+footer h5 {
+  text-align: center;
+  padding: 1rem;
+}
+
+footer h3 {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.social-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 1.5rem;
+}
+
+.social-footer img {
+  display: block;
+  margin: auto;
+  width: 2rem;
+}
+
+footer p {
+  font-size: 0.8rem;
+}
+/* Footer End */
+
+/* Landing Start */
+#landing {
+  background-image: linear-gradient(rgba(4, 9, 30, 0.6), rgba(4, 9, 30, 0.6)), url(../asset/bg-1.jpg);
+  background-size: cover;
+  background-position: 30%;
+  display: flex;
+  align-items: center;
+}
+
+#landing h1 {
+  color: var(--putih);
+  font-size: 4rem;
+}
+
+#landing span {
+  color: var(--ketiga);
+}
+/* Landing End */
+
+/* About Start */
+#about {
+  height: 100%;
+  background-color: var(--ketiga);
+}
+
+#about h1 {
+  color: var(--putih);
+}
+
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-content p {
+  width: 60%;
+  margin-left: 3rem;
+  color: var(--putih);
+}
+
+.foto-logo {
+  width: 15rem;
+}
+/* About End */
+
+/* History Start */
+#history {
+  height: 100%;
+}
+
+#history h1 {
+  margin-bottom: 1rem;
+}
+
+#history p {
+  text-align: center;
+  width: 70%;
+  margin: auto;
+}
+/* History End */
+
+/* Welcome Start */
+#welcome {
+  background-image: linear-gradient(rgba(4, 9, 30, 0.6), rgba(4, 9, 30, 0.7)), url(../asset/bg-1.jpg);
+  background-size: cover;
+  color: var(--putih);
+  background-position: 50%;
+  height: 100%;
+}
+
+#welcome h1 {
+  margin-bottom: 1rem;
+}
+
+#welcome img {
+  width: 13rem;
+  border-bottom: 3px solid var(--ketiga);
+}
+
+#welcome .welcome-container {
+  display: flex;
+  align-items: center;
+}
+
+#welcome .greet {
+  margin: 0 5rem;
+}
+
+#welcome p {
+  font-size: 1.3rem;
+  margin-bottom: 3rem;
+  text-align: justify;
+}
+
+#welcome h3 {
+  text-align: right;
+  font-size: 1.5rem;
+}
+/* Welcome End */
+
+/* Visi Misi Start */
+#visimisi {
+  height: 100%;
+}
+
+#visimisi h1 {
+  margin-bottom: 1rem;
+}
+
+#visimisi .visimisi-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#visimisi .visi,
+#visimisi .misi {
+  width: 30%;
+  text-align: center;
+}
+
+#visimisi h2 {
+  margin-bottom: 0.7rem;
+}
+
+#visimisi .line {
+  border: 2px solid var(--ketiga);
+  margin: 1rem auto;
+  width: 30%;
+}
+/* Visi Misi End */
+
+@media (max-width: 1366px) {
+  html {
+    font-size: 85%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 70%;
+  }
+
+  nav .container {
+    position: static;
+  }
+
+  .burger-menu {
+    display: flex;
+    align-items: center;
+    color: var(--putih);
+    position: relative;
+  }
+
+  nav .nav-item {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: var(--ketiga);
+    width: 13rem;
+    height: 100vh;
+    transition: 0.3s;
+    display: block;
+  }
+
+  nav .nav-item li a {
+    display: block;
+    margin: 1.7rem;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  nav .nav-item.active {
+    right: 0;
+  }
+
+  .nav-item li:hover::after {
+    width: 50%;
+  }
+
+  .social-footer .social {
+    margin: 1rem 1.5rem;
+  }
+
+  #history p {
+    width: 100%;
+  }
+
+  #welcome img {
+    display: none;
+  }
+
+  #welcome .greet {
+    margin: 0;
+  }
+
+  #visimisi .visimisi-container {
+    display: block;
+  }
+
+  #visimisi .visi,
+  #visimisi .misi {
+    width: 100%;
+  }
+
+  #visimisi .misi {
+    margin-top: 3rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+
+  nav .container {
+    position: static;
+  }
+
+  .burger-menu {
+    display: flex;
+    align-items: center;
+    color: var(--putih);
+    position: relative;
+  }
+
+  nav .nav-item {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: var(--ketiga);
+    width: 13rem;
+    height: 100vh;
+    transition: 0.3s;
+    display: block;
+  }
+
+  nav .nav-item li a {
+    display: block;
+    margin: 1.7rem;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  nav .nav-item.active {
+    right: 0;
+  }
+
+  .nav-item li:hover::after {
+    width: 50%;
+  }
+}

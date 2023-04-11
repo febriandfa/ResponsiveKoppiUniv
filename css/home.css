@@ -1,0 +1,612 @@
+/* Variable Start */
+:root {
+  --pertama: #2c3639;
+  --kedua: #3f4e4f;
+  --ketiga: #a27b5c;
+  --keempat: #dcd7c9;
+  --putih: #f5f5f5;
+  --hitam: #111111;
+}
+/* Variable End */
+
+/* General Start */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+}
+
+p {
+  line-height: 1.8rem;
+}
+
+section {
+  padding: 5rem 0 3rem;
+  max-width: 100vw;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--keempat);
+}
+
+h1 {
+  text-align: center;
+  font-size: 3.5rem;
+}
+
+footer {
+  background-color: var(--ketiga);
+  color: var(--putih);
+  padding-top: 1rem;
+}
+/* General End */
+
+/* Nav Start */
+nav {
+  width: 100%;
+  height: 5rem;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  z-index: 999999;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--hitam);
+  background-color: var(--ketiga);
+}
+
+nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  position: absolute;
+  right: 0;
+}
+
+.nav-item li a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  color: var(--putih);
+}
+
+.nav-item li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: var(--putih);
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.nav-item li:hover::after {
+  width: 100%;
+}
+
+.nav-button a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--putih);
+}
+
+nav img {
+  width: 2.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.burger-menu {
+  display: none;
+}
+/* Nav End */
+
+/* Footer Start */
+footer .container {
+  border-bottom: 1px solid var(--putih);
+}
+
+footer h5 {
+  text-align: center;
+  padding: 1rem;
+}
+
+footer h3 {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.social-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 1.5rem;
+}
+
+.social-footer img {
+  display: block;
+  margin: auto;
+  width: 2rem;
+}
+
+footer p {
+  font-size: 0.8rem;
+}
+/* Footer End */
+
+/* Landing Section Start */
+#landing {
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.6), rgba(4, 9, 30, 0.6)), url(./asset/bg-3.jpg);
+  background-size: cover;
+  background-position-y: 47%;
+}
+.back-video {
+  top: -7rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -10;
+}
+
+#landing h1 {
+  color: var(--putih);
+  font-size: 4rem;
+}
+
+#landing p {
+  width: 70%;
+  padding: 1rem;
+  font-size: 1.3rem;
+  margin: auto;
+  color: var(--putih);
+}
+
+#landing span {
+  color: var(--ketiga);
+}
+
+.landing-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.btn-home {
+  display: inline-block;
+  font-weight: 600;
+  color: var(--putih);
+  padding: 0.5rem 0.5rem 0.5rem;
+  margin-top: 1rem;
+  border: 2px solid var(--ketiga);
+}
+
+.btn-home:hover {
+  background-color: var(--ketiga);
+}
+/* Landing Section End */
+
+/* About Section Start */
+#about {
+  height: 100%;
+  background-color: var(--ketiga);
+}
+
+#about h1 {
+  color: var(--putih);
+}
+
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-content p {
+  width: 60%;
+  margin-left: 3rem;
+  color: var(--putih);
+}
+
+.foto-logo {
+  width: 15rem;
+}
+/* About Section End */
+
+/* Leader Section Start */
+.foto-pimpinan {
+  display: block;
+  max-width: 100%;
+  /* border: 3px solid var(--pertama); */
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+#leader {
+  height: 100%;
+}
+/* Leader Section End */
+
+/* Faculties Section Start */
+#faculties {
+  height: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.6), rgba(4, 9, 30, 0.6)), url(../asset/bg-3.jpg);
+  background-size: cover;
+  background-position-y: 30%;
+}
+
+#faculties h1,
+#faculties p {
+  color: var(--putih);
+}
+
+.faculty-list {
+  height: 20rem;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.faculty {
+  flex-basis: 32%;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+  width: 5rem;
+  height: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.faculty img {
+  background-size: cover;
+  height: 100%;
+}
+
+.faculty h3 {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.layer {
+  background-color: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+
+.layer:hover {
+  background-color: rgba(44, 54, 57, 0.7);
+}
+
+.layer p {
+  width: 95%;
+  color: var(--putih);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s;
+  text-align: center;
+}
+
+.layer:hover p {
+  bottom: 20%;
+  opacity: 1;
+}
+
+.layer:hover h3 {
+  color: var(--putih);
+  transition: 0.5s;
+}
+
+#faculties .title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+/* Faculties Section End */
+
+/* Facilites Section Start */
+#facilities {
+  text-align: center;
+  height: 100%;
+}
+
+#facilities .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto 2fr 2fr;
+  grid-template-areas:
+    "title title title title"
+    "item-1 item-2 item-3 item-4"
+    "item-5 item-6 item-7 item-8";
+  gap: 2rem;
+}
+
+.facilities-title {
+  grid-area: title;
+  margin-bottom: 0.4rem;
+}
+
+#facilities img {
+  width: 13rem;
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#facilities p:not(.facilities-title p) {
+  width: 80%;
+  margin: auto;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+}
+
+.facilities-1 {
+  grid-area: item-1;
+}
+
+.facilities-2 {
+  grid-area: item-2;
+}
+
+.facilities-3 {
+  grid-area: item-3;
+}
+
+.facilities-4 {
+  grid-area: item-4;
+}
+
+.facilities-5 {
+  grid-area: item-5;
+}
+
+.facilities-6 {
+  grid-area: item-6;
+}
+
+.facilities-7 {
+  grid-area: item-7;
+}
+
+.facilities-8 {
+  grid-area: item-8;
+}
+/* Facilites Section End */
+
+@media (max-width: 1366px) {
+  html {
+    font-size: 85%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 70%;
+  }
+
+  nav .container {
+    position: static;
+  }
+
+  .burger-menu {
+    display: flex;
+    align-items: center;
+    color: var(--putih);
+    position: relative;
+  }
+
+  nav .nav-item {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: var(--ketiga);
+    width: 13rem;
+    height: 100vh;
+    transition: 0.3s;
+    display: block;
+  }
+
+  nav .nav-item li a {
+    display: block;
+    margin: 1.7rem;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  nav .nav-item.active {
+    right: 0;
+  }
+
+  .nav-item li:hover::after {
+    width: 50%;
+  }
+
+  #faculties {
+    height: 120rem;
+  }
+
+  .faculty-list {
+    height: 20rem;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .faculty {
+    flex-basis: 70%;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    width: 5rem;
+    height: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .layer p {
+    width: 95%;
+    color: var(--putih);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+    text-align: center;
+  }
+
+  .layer:hover p {
+    bottom: 35%;
+    opacity: 1;
+  }
+
+  #facilities .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 2fr 2fr 2fr 2fr;
+    grid-template-areas:
+      "title title"
+      "item-1 item-2"
+      "item-3 item-4"
+      "item-5 item-6"
+      "item-7 item-8";
+    gap: 2rem;
+  }
+
+  .social-footer .social {
+    margin: 1rem 1.5rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+
+  nav .container {
+    position: static;
+  }
+
+  .burger-menu {
+    display: flex;
+    align-items: center;
+    color: var(--putih);
+    position: relative;
+  }
+
+  nav .nav-item {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: var(--ketiga);
+    width: 13rem;
+    height: 100vh;
+    transition: 0.3s;
+    display: block;
+  }
+
+  nav .nav-item li a {
+    display: block;
+    margin: 1.7rem;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  nav .nav-item.active {
+    right: 0;
+  }
+
+  .nav-item li:hover::after {
+    width: 50%;
+  }
+
+  #faculties {
+    height: 124rem;
+  }
+
+  .faculty-list {
+    height: 20rem;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .faculty {
+    flex-basis: 70%;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    width: 5rem;
+    height: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .layer p {
+    width: 95%;
+    color: var(--putih);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+    text-align: center;
+  }
+
+  .layer:hover p {
+    bottom: 35%;
+    opacity: 1;
+  }
+
+  #facilities .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 2fr 2fr 2fr 2fr;
+    grid-template-areas:
+      "title title"
+      "item-1 item-2"
+      "item-3 item-4"
+      "item-5 item-6"
+      "item-7 item-8";
+    gap: 2rem;
+  }
+}

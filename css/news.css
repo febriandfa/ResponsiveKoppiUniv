@@ -1,0 +1,420 @@
+/* Variable Start */
+:root {
+  --pertama: #2c3639;
+  --kedua: #3f4e4f;
+  --ketiga: #a27b5c;
+  --keempat: #dcd7c9;
+  --putih: #f5f5f5;
+  --hitam: #111111;
+}
+/* Variable End */
+
+/* General Start */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+}
+
+p {
+  line-height: 1.6rem;
+}
+
+section {
+  padding: 5rem 0 3rem;
+  max-width: 100vw;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--keempat);
+}
+
+h1 {
+  text-align: center;
+  font-size: 3.5rem;
+}
+
+footer {
+  background-color: var(--ketiga);
+  color: var(--putih);
+  padding-top: 1rem;
+}
+
+.btn {
+  display: block;
+  font-weight: 600;
+  color: var(--ketiga);
+  padding: 0.5rem 0.5rem 0.5rem;
+  margin: 2rem auto 0;
+  border: 2px solid var(--ketiga);
+  width: 8rem;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: var(--ketiga);
+  color: var(--putih);
+}
+/* General End */
+
+/* Nav Start */
+nav {
+  width: 100%;
+  height: 5rem;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  z-index: 999999;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--hitam);
+  background-color: var(--ketiga);
+}
+
+nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  position: absolute;
+  right: 0;
+}
+
+.nav-item li a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  color: var(--putih);
+}
+
+.nav-item li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: var(--putih);
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.nav-item li:hover::after {
+  width: 100%;
+}
+
+.nav-button a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--putih);
+}
+
+nav img {
+  width: 2.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.burger-menu {
+  display: none;
+}
+/* Nav End */
+
+/* Footer Start */
+footer .container {
+  border-bottom: 1px solid var(--putih);
+}
+
+footer h5 {
+  text-align: center;
+  padding: 1rem;
+}
+
+footer h3 {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.social-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 1.5rem;
+}
+
+.social-footer img {
+  display: block;
+  margin: auto;
+  width: 2rem;
+}
+
+footer p {
+  font-size: 0.8rem;
+}
+/* Footer End */
+
+/* Landing Start */
+#landing {
+  background-image: linear-gradient(rgba(4, 9, 30, 0.6), rgba(4, 9, 30, 0.6)), url(../asset/bg-4.jpg);
+  background-size: cover;
+  background-position: 30%;
+  display: flex;
+  align-items: center;
+}
+
+#landing h1 {
+  color: var(--putih);
+  font-size: 4rem;
+}
+
+#landing span {
+  color: var(--ketiga);
+}
+/* Landing End */
+
+/* Trending Start */
+#hot {
+  height: 100%;
+}
+
+#hot .trend-grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas:
+    "news-1 news-2"
+    "news-3 news-4";
+  gap: 1.5rem;
+}
+
+#hot img {
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  object-fit: cover;
+}
+
+.trend-1 {
+  grid-area: news-1;
+  background-color: var(--ketiga);
+}
+
+.trend-2 {
+  grid-area: news-2;
+  background-color: var(--ketiga);
+}
+
+.trend-3 {
+  grid-area: news-3;
+  background-color: var(--ketiga);
+}
+
+.trend-4 {
+  grid-area: news-4;
+  background-color: var(--ketiga);
+}
+
+#hot .hot-desc {
+  color: var(--putih);
+  padding: 0 1.3rem 1.3rem;
+}
+
+.tgl {
+  text-align: end;
+  margin: 0.5rem 0;
+}
+/* Trending End */
+
+/* Today Start */
+#today {
+  height: 100%;
+}
+
+#today .today-grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  grid-template-rows: repeat(4, 0.5fr);
+  grid-template-areas:
+    "day-1 day-2"
+    "day-1 day-3"
+    "day-1 day-4"
+    "day-1 day-5";
+  gap: 0.5rem;
+  column-gap: 2rem;
+  color: var(--putih);
+}
+
+#today img {
+  width: 100%;
+}
+
+.day-desc {
+  padding: 0 1.3rem 1.3rem;
+}
+
+.today-1 {
+  grid-area: day-1;
+  background-color: var(--ketiga);
+}
+
+.today-2 {
+  grid-area: day-2;
+  background-color: var(--ketiga);
+  padding: 0 1.3rem 1.3rem;
+}
+
+.today-3 {
+  grid-area: day-3;
+  background-color: var(--ketiga);
+  padding: 0 1.3rem 1.3rem;
+}
+
+.today-4 {
+  grid-area: day-4;
+  background-color: var(--ketiga);
+  padding: 0 1.3rem 1.3rem;
+}
+
+.today-5 {
+  grid-area: day-5;
+  background-color: var(--ketiga);
+  padding: 0 1.3rem 1.3rem;
+}
+
+/* .today-6 {
+  grid-area: day-6;
+}
+
+.today-7 {
+  grid-area: day-7;
+} */
+/* Today End */
+
+@media (max-width: 1366px) {
+  html {
+    font-size: 85%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 70%;
+  }
+
+  nav .container {
+    position: static;
+  }
+
+  .burger-menu {
+    display: flex;
+    align-items: center;
+    color: var(--putih);
+    position: relative;
+  }
+
+  nav .nav-item {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: var(--ketiga);
+    width: 13rem;
+    height: 100vh;
+    transition: 0.3s;
+    display: block;
+  }
+
+  nav .nav-item li a {
+    display: block;
+    margin: 1.7rem;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  nav .nav-item.active {
+    right: 0;
+  }
+
+  .nav-item li:hover::after {
+    width: 50%;
+  }
+
+  .social-footer .social {
+    margin: 1rem 1.5rem;
+  }
+
+  #today .today-grid {
+    grid-template-rows: repeat(3, 0.5fr);
+    grid-template-areas:
+      "day-1 day-1"
+      "day-2 day-3"
+      "day-4 day-5";
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+
+  nav .container {
+    position: static;
+  }
+
+  .burger-menu {
+    display: flex;
+    align-items: center;
+    color: var(--putih);
+    position: relative;
+  }
+
+  nav .nav-item {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: var(--ketiga);
+    width: 13rem;
+    height: 100vh;
+    transition: 0.3s;
+    display: block;
+  }
+
+  nav .nav-item li a {
+    display: block;
+    margin: 1.7rem;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  nav .nav-item.active {
+    right: 0;
+  }
+
+  .nav-item li:hover::after {
+    width: 50%;
+  }
+}
